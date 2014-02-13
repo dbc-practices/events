@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>Delete event confirmation</h1>
+
+  <form action="/events/delete/<%=@event.id%>" method="post">
+    Are you sure you want to delete "<%=@event.name%>"?<br><br>
+    <input type="checkbox" name="response" value="Yes">Yes
+    <br><br>
+    <input type="submit" name="Submit">
+  </form>
+  <br><br>
+  <a href="/">Home</a><br>
+
+</div>

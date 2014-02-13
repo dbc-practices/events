@@ -1,0 +1,22 @@
+<div class="container">
+  <h2>List of created events</h2>
+  <% @events.each do |event| %>
+    <a href='<%= "/events/#{event.id}" %>'> <%= event.name %></a><br>
+  <% end %>
+  <br><br><br>
+
+  <form id="ajax_create" method="post" action="/events/create/ajax">
+    <h2>Create new event on ajax!</h2>
+    Name: <input type="text" name="name" /><br>
+    Location: <input type="text" name="location" /><br>
+    Starts at: <input type="date" name="start" /><br>
+    End at: <input type="date" name="end" /><br><br><br>
+    <input type="submit" name="create-event" value="Create Event"/><br><br>
+  </form>
+
+  <br><br><br>
+
+  <a href='/home'>Home</a><br>
+  <a href='/logout'>Log out</a><br>
+
+</div>

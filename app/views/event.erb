@@ -1,0 +1,27 @@
+<div class="container">
+  <h1>Event info</h1>
+
+  Name of event: <%= @event.name %><br>
+  Location of event:<%= @event.location %><br>
+  Start at: <%= @event.starts_at %><br>
+  End at:<%= @event.ends_at %><br>
+  Event creator: <%= @creator %><br>
+
+  <br><br>
+  <% if @guests %>
+    <h2><% "GUESTS" %></h2>
+    <ol>
+      <% @guests.each do |guest| %>
+        <li><%= guest.first_name + ' ' + guest.last_name %></li>
+      <% end %>
+    </ol>
+  <% end %>
+
+  <br><br>
+  <a href='<%= "/events/edit/#{@event.id}" %>'>Edit this event</a><br>
+  <a href='<%= "/events/delete/#{@event.id}" %>'>Delete this event</a><br>
+  <br><br>
+  <a href='/home'>Home</a><br>
+  <a href='/logout'>Log out</a><br>
+
+</div>

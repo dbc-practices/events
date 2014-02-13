@@ -1,0 +1,10 @@
+<div class="container">
+  <h2>List of created events</h2>
+  <% @events.each do |event| %>
+    <a href='<%= "/events/#{event.id}" %>'> <%= event.name %></a><br>
+  <% end %>
+  <br><br><br>
+  <a href='/home'>Home</a><br>
+  <a href='/logout'>Log out</a><br>
+
+</div>
